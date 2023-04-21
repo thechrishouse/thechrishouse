@@ -110,8 +110,6 @@ header.shadow {
   width: 100%;
   min-height: 100vh;
   padding: 50px 75px 100px;
-  /* display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr; */
   align-items: center;
   gap: 1rem;
   display: flex;
@@ -123,7 +121,6 @@ header.shadow {
   font-weight: 500;
 }
 .home-text h1 {
-  /* display: block; */
   font-size: clamp(40px, 9vw, 60px);
   line-height: 1.3;
   font-weight: 550;
