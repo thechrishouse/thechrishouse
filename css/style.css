@@ -242,7 +242,7 @@ span {
   bottom: 0;
   left: 0;
   height: 0.5rem;
-  background: var(--main-color);
+  background: rgb(0, 187, 0);
   border-radius: 0.5rem;
 }
 .html-bar {
