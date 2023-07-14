@@ -420,7 +420,7 @@ form textarea {
 }
 @media (max-width: 768px) {
   :root {
-    --big-font: 2.4rem;
+    --big-font: 2.4re2;
     --medium-font: 1.2rem;
   }
   header {
