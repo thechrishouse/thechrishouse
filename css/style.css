@@ -27,6 +27,7 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 section {
   padding: 50px 10% 50px;
