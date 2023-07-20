@@ -106,7 +106,6 @@ header.shadow {
   cursor: pointer;
 }
 .home {
-  position: relative;
   width: 100%;
   min-height: 100vh;
   padding: 50px 75px 100px;
@@ -114,7 +113,6 @@ header.shadow {
   gap: 1rem;
   display: flex;
   flex-direction: row;
-  /* flex-direction:  */
 }
 .home-text span {
   font-size: 1rem;
@@ -127,12 +125,10 @@ header.shadow {
   color: #6ba1ff;
 }
 .home-text h2 {
-  /* display: block; */
   font-size: clamp(40px, 8vw, 60px);
   line-height: 1.2;
   font-weight: 550;
   color: #a9a297;
-  /* padding-top: 10px; */
 }
 .home-text p {
   font-size: 1rem;
@@ -160,6 +156,7 @@ header.shadow {
   color: #fff;
   padding: 0.7rem 1.3rem;
   border-radius: 0.5rem;
+  transition: 0.25s ease-in-out;
 }
 .btn:hover {
   background: #4dff00;
@@ -325,6 +322,15 @@ span {
 .projects-img img:hover {
   transform: scale(1.1);
   transition: 0.5s;
+}
+.lightbox {
+  max-width: 500px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: yellowgreen;
 }
 .contact-heading {
   font-size: 2rem;

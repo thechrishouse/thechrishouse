@@ -3,6 +3,7 @@ const header = document.querySelector("header");
 const menu = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar");
 const imgProfile = document.querySelector(".about-img");
+const lightBox = document.querySelector('lightBox');
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 0);
@@ -27,4 +28,4 @@ let darkmode = document.querySelector("#darkmode");
 //     darkmode.classList.replace("bx-moon", "bx-sun");
 //     document.body.classList.remove("active");
 //   }
-// };`
+// };
