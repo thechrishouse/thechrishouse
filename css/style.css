@@ -356,9 +356,7 @@ header.shadow {
   transform: scale(1.1);
   transition: 0.5s;
 }
-.projects-content:nth-child(1) {
-  background-image: './image/pig.png';
-}
+
 .lightbox {
   display: none;
   justify-content: space-between;
@@ -367,7 +365,7 @@ header.shadow {
   height: auto;
   padding: 2rem 0;
   border-radius: 0.2rem;
-  box-shadow: 0 0 17rem rgba(32, 32, 32, 0.541);;
+  box-shadow: 0 0 12rem rgb(0, 0, 0);;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -521,12 +519,12 @@ header.shadow {
   transition: 0.5s;
   animation: 0.5s;
   width: 100%;
-  min-height: 100vw;
+  min-height: 100vw; 
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 250, 200, 0.56);
+  background-color: rgba(2, 109, 2, 0.1);
   backdrop-filter: blur(0.25rem);
   z-index: 2;
   cursor: pointer;

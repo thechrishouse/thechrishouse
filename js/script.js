@@ -214,7 +214,7 @@ const dataGuess = {
 const dataTravia = {
   title: 'Travia: Discover Your Solitude',
   languages: ['HTML', 'CSS', 'JavaScript'],
-  description: 'A interactive multi-page traveling app',
+  description: 'A interactive multi-page traveling app with smooth animations and a modern layout',
   image: './image/travia.png',
   link: 'Travia/index.html',
 }
