@@ -8,7 +8,7 @@ const imgProfile = document.querySelector(".about-img");
 
 // const serviceBoxes = document.querySelectorAll('.services-box');
 
-const projects = document.querySelectorAll('.project-img');
+const projects = document.querySelectorAll('.project');
 const lightbox = document.querySelector('.lightbox');
 const lightImg = document.getElementById('lightbox-img');
 const lightTitle = document.getElementById('lightbox-title')
@@ -18,13 +18,7 @@ const lightBtn = document.getElementById('lightbox-btn');
 const overlay = document.querySelector('.overlay');
 const lightLink = document.getElementById('lightbox-link');
 
-// Project Elements //
-const pig = document.getElementById('pig');
-const mapty = document.getElementById('mapty')
-const guess = document.getElementById('guess');
-const breu = document.getElementById('breu');
-const connect = document.getElementById('connect');
-const travia = document.getElementById('travia');
+
 
 // Sticky Navbar
 window.addEventListener("scroll", () => {
@@ -59,8 +53,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting) {
       entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
     }
   });
 })
@@ -68,10 +60,11 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 const hiddenElementsL = document.querySelectorAll('.hidden-left');
 const hiddenElementsR = document.querySelectorAll('.hidden-right');
+const hiddenElementsU = document.querySelectorAll('.hidden-up');
 hiddenElements.forEach((el) => observer.observe(el));
 hiddenElementsL.forEach((el) => observer.observe(el));
 hiddenElementsR.forEach(el => observer.observe(el));
-
+hiddenElementsU.forEach(el => observer.observe(el));
 
 
 //////////// Helper Functions ///////////////
@@ -79,7 +72,7 @@ hiddenElementsR.forEach(el => observer.observe(el));
 //// Lightbox
 const openLightbox = function() {
   lightbox.style.display = 'flex';
-  console.log('Lightbox opened');
+  console.log('Lighbox opened');
 };
 const closeLightbox = function() {
   clearLightbox();
@@ -88,11 +81,10 @@ const closeLightbox = function() {
 };
 const showOverlay = function() {
   overlay.style.display = 'block';
-  console.log('Overlay showed');
+  console.log('Overlay ')
 };
 const hideOverlay = function() {
   overlay.style.display = 'none';
-  console.log('Overlay hidden');
 }
 const clearLightbox = function() {
   lightImg.innerHTML = '';
@@ -106,7 +98,6 @@ const updateLightbox = function(data) {
   lightTitle.textContent = data.title;
   lightDesc.textContent = data.description;
   lightLink.href = data.link;
-  console.log('Lightbox data updated');
 }
 
 const renderTech = function(data) {
@@ -138,7 +129,7 @@ projects.forEach(function(image) {
   image.addEventListener('click', e => {
     e.preventDefault();
 
-    const imageId = image.parentElement.id;
+    const imageId = image.id;
     ///// Update Lightbox Data /////
     if (imageId === 'bankist') {
       updateLightbox(dataBankist);
@@ -152,8 +143,8 @@ projects.forEach(function(image) {
     } else if (imageId === 'breu') {
       updateLightbox(dataBreu);
       // renderTech(dataBreu);
-    } else if (imageId === 'guess') {
-      updateLightbox(dataGuess);
+    } else if (imageId === 'weatherme') {
+      updateLightbox(dataWeatherMe);
       // renderTech(dataGuess);
     } else if (imageId === 'travia') {
       updateLightbox(dataTravia);
@@ -215,7 +206,14 @@ const dataTravia = {
   title: 'Travia: Discover Your Solitude',
   languages: ['HTML', 'CSS', 'JavaScript'],
   description: 'A interactive multi-page traveling app with smooth animations and a modern layout',
-  image: './image/travia.png',
+  image: '../image/travia.png',
   link: 'Travia/index.html',
 }
 
+const dataWeatherMe = {
+  title: 'WeatherMe',
+  languages: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
+  description: 'A dynamic weather app that provides seamless forecast data with a eye-catching layout',
+  image: '../image/weatherme.png',
+  link: 'WeatherMe/index.html',
+}

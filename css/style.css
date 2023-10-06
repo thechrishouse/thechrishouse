@@ -125,7 +125,7 @@ header.shadow {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  padding: 2.4rem 8.2rem 1rem;
+  padding: 2rem 8.2rem 1rem;
   align-items: center;
 }
 .home-text span {
@@ -259,7 +259,7 @@ header.shadow {
   text-align: center;
   border-radius: 0.5rem;
   border-bottom: 2px solid var(--sec-color);
-  box-shadow: 0rem 0rem 7px rgb(14 55 54 / 15%);
+  box-shadow: 0rem 0rem 0.5rem rgba(2, 166, 70, 0.24);
   position: relative; 
   transition: width 0.3s ease;
 }
@@ -344,7 +344,57 @@ header.shadow {
 .project {
   overflow: hidden;
   border-radius: 0.5rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 300px;
+  aspect-ratio: 16/10;
+  z-index: 2;
+  cursor: pointer;
+  position: relative;
 }
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(8, 20, 38, 0.644);
+  display: none;
+  transition: opacity 0.75s ease-in;
+  z-index: 1;
+}  
+.project:hover .project-overlay {
+  display: flex;
+  color: rgba(0, 0, 0, 0.634);
+  pointer-events: none;
+}
+.project .project-overlay h3 {
+  color: var(--sec-color);
+  z-index: 3;
+}
+#bankist {
+  background-image: url('../image/bankist.png');
+}
+#mapty {
+  background-image: url('../image/mapty.png');
+}
+#organizy {
+  background-image: url('../image/organizy.png');
+}
+#breu {
+  background-image: url('../image/breu.png');
+}
+#weatherme {
+  background-image: url('../image/weatherme.png');
+}
+#travia {
+  background-image: url('../image/travia.png');
+}
+
 .project-img {
   width: 100%;
   display: block;
@@ -398,7 +448,6 @@ header.shadow {
   width: 40%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   margin: 1rem 2rem;
   font-size: var(--p-font);
 }
@@ -477,7 +526,7 @@ header.shadow {
 }
 .contact-area button:hover {
   transform: scale(1.125);
-  background-color: var(--sec-color);
+  background-color: linear-gradient(120deg, #39b385, #9be15d);
 }
 
 .footer {
@@ -548,6 +597,12 @@ header.shadow {
   transform: translateX(100%);
   transition: all 1s;
 }
+.hidden-up {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s;
+}
 .show {
 	opacity: 1;
 	filter: blur(0);
@@ -610,6 +665,7 @@ header.shadow {
   }
   .home {
     grid-template-columns: 0.5fr 3fr;
+    align-items: center;
   }
   .home-text {
     grid-column: 1/3;
